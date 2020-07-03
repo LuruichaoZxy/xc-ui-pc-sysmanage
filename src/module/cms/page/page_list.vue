@@ -10,7 +10,14 @@
           :value="item.siteId"
         ></el-option>
       </el-select>页面别名:
-      <el-input v-model="params.pageAliase" style="width: 100px"></el-input>
+      <el-select v-model="params.pageAliase" placeholder="请选择页面别名">
+      <el-option
+        v-for="item in list"
+        :key="item.pageAliase"
+        :label="item.pageAliase"
+        :value="item.pageAliase"
+      ></el-option>
+      </el-select>
       <el-button type="primary" v-on:click="query" size="small">查询</el-button>
       <router-link
         class="mui-tab-item"

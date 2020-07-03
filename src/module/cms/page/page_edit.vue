@@ -133,13 +133,13 @@ export default {
     this.pageId = this.$route.params.pageId;
     //根据主键查询页面信息
     cmsApi.page_get(this.pageId).then(res => {
-      
-      if (res.success) {
-        this.pageForm = res.cmsPage;
-      }
-      // if(res){
-      //   this.pageForm=res;
+
+      // if (res.success) {
+      //   this.pageForm = res.cmsPage;
       // }
+      if(res){
+        this.pageForm=res;
+      }
     });
   },
   mounted: function() {
